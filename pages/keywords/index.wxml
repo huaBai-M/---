@@ -1,0 +1,9 @@
+<!--pages/keywords/keywords.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <view class='contentKey container'>
+            <view class='topHead'>搜索引擎关键词分布</view>
+            <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}" bind:init="echartInitBar"></ec-canvas>
+        </view>
+    </scroll-view>
+</page>

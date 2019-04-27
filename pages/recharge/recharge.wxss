@@ -1,0 +1,68 @@
+/* pages/recharge/recharge.wxss */
+page {
+    height: 100%;
+}
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background: url("http://page-bucket.oiaqye7985.com/wechat/mini-syb/bg.jpg") no-repeat top;
+    background-size: cover;
+    
+}
+.topTitle {
+    width: 94%;
+    margin-left: 3%;
+    border-radius: 20rpx;
+    background-color: #fff;
+    padding: 30rpx 0 50rpx 0;
+    box-shadow: 0 0 25rpx #ccc;
+    margin-top: 30rpx;
+}
+.topTitle .type {
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 94%;
+    margin-left: 3%;
+    border-bottom: 1px solid #e7e7e7;
+}
+.topTitle .type .ct {
+    /* width: 30%; */
+    display: inline-block;
+    color: #333;
+    font-size: 34rpx;
+    text-align: left;
+}
+.topTitle .type image {
+    width: 200rpx;
+    height: 100rpx;
+    float: right;
+    margin-right:20rpx;
+}
+.topTitle .type input {
+    width: 180rpx;
+    color: #333;
+    font-size: 30rpx;
+    vertical-align: middle;
+    text-align: right;
+    float: right;
+    margin-top: 24rpx;
+    margin-right: 20rpx;
+}
+.topTitle .type:last-child input {
+    float: none;
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 50rpx;
+}
+.btn {
+    margin-top: 35rpx;
+    margin-bottom: 35rpx;
+}
+.btn button {
+    width: 80%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #006cff;
+    border-radius: 35rpx;
+    color: #fff;
+}

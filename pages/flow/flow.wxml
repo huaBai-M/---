@@ -1,0 +1,53 @@
+<!--pages/flow/flow.wxml-->
+<scroll-view class='pageBody'>
+    <view class='topTitle'>
+         <van-tabs type="card" color="#0084ff" bind:change="onChange">
+            <van-tab title="充值查询">
+                <view class="table">
+                    <view class="tr bg-w">
+                        <view class="th">充值时间</view>
+                        <view class="th">充值卡号</view>
+                        <view class="th ">点击数量/次</view>
+                    </view>
+                    <block wx:for="{{listData}}" wx:key="{{code}}">
+                        <view class="tr">
+                            <view class="td">{{item.rechargeTime}}</view>
+                            <view class="td">{{item.cardUuid}}</view>
+                            <view class="td">{{item.cardNum}}</view>
+                        </view>
+                    </block>
+                </view>
+            </van-tab>
+            <van-tab title="今日点击">
+            <view class="table">
+                    <view class="tr bg-w">
+                        <view class="th">浏览时间</view>
+                        <view class="th">受访界面</view>
+                        <view class="th ">地区</view>
+                    </view>
+                    <block wx:for="{{listDataDay}}" wx:key="{{code}}">
+                        <view class="tr">
+                            <view class="td">{{item.searchTerm}}</view>
+                            <view class="td">来源</view>
+                            <view class="td">{{item.local}}</view>
+                        </view>
+                    </block>
+                </view></van-tab>
+            <van-tab title="累计点击"><view class="table">
+                    <view class="tr bg-w">
+                        <view class="th">浏览时间</view>
+                        <view class="th">受访界面</view>
+                        <view class="th ">地区</view>
+                    </view>
+                    <block wx:for="{{listDataAll}}" wx:key="{{code}}">
+                        <view class="tr">
+                            <view class="td">{{item.searchTerm}}</view>
+                            <view class="td">来源</view>
+                            <view class="td">{{item.local}}</view>
+                        </view>
+                    </block>
+                </view></van-tab>
+        </van-tabs>
+        <view class='tiltes' wx:if="{{state}}">没有更多数据了~</view>
+    </view>
+</scroll-view>

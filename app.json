@@ -1,0 +1,61 @@
+{
+    "pages": [
+        "pages/bangding/bangding",
+        "pages/index/index",
+        "pages/bangMsg/bangMsg",
+        "pages/login/login",
+        "pages/server/index",
+        "pages/business/business",
+        "pages/recharge/recharge",
+        "pages/flow/flow",
+        "pages/user/index",
+        "pages/baseMesg/baseMesg",
+        "pages/updateMesg/updateMesg",
+        "pages/safety/safety",
+        "pages/message/index",
+        "pages/buy/buy",
+        "pages/keywords/index",
+        "pages/indexHot/indexHot",
+        "pages/shouquan/shouquan"
+    ],
+    "enablePullDownRefresh": true,
+    "window": {
+        "backgroundTextStyle": "dark",
+        "backgroundColor": "#006cff",
+        "navigationBarBackgroundColor": "#006cff",
+        "navigationBarTitleText": "生意帮",
+        "navigationBarTextStyle": "#fff"
+    },
+    "tabBar": {
+        "color": "#949bb7",
+        "selectedColor": "#006CFF",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "iconPath": "img/icon_data_unclicked.png",
+                "selectedIconPath": "img/icon_data_clicked.png",
+                "pagePath": "pages/index/index",
+                "text": "数据中心"
+            },
+            {
+                "iconPath": "img/icon_message_unclicked.png",
+                "selectedIconPath": "img/icon_message_clicked.png",
+                "pagePath": "pages/server/index",
+                "text": "服务中心"
+            },
+            {
+                "iconPath": "img/icon_service_unclicked.png",
+                "selectedIconPath": "img/icon_service_clicked.png",
+                "pagePath": "pages/business/business",
+                "text": "消息中心"
+            },
+            {
+                "iconPath": "img/icon_user_unclicked.png",
+                "selectedIconPath": "img/icon_user_clicked.png",
+                "pagePath": "pages/user/index",
+                "text": "用户中心"
+            }
+        ]
+    }
+}

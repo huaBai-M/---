@@ -1,0 +1,22 @@
+<!--pages/bangding/bangding.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <view class='headImg'>
+           <view class='msg'><text class='iconfont icon-icon_lock'></text><input placeholder="请输入手机号" type='number' placeholder-style="font-size:14px;" value='{{tel}}' bindinput='formName'/><text class='iconfont icon-icon_see'></text></view>
+        </view>
+        <view class='base-mesg'>
+            <view class='msg'><text class='iconfont icon-icon_lock'></text><input placeholder="请输入验证码" value='{{code}}' placeholder-style="font-size:14px;" bindinput='formCode' type="number" maxlength="6"/><text class='line'></text>
+            <button wx:if="{{!send}}" class='click' bindtap='clickPost'>点击获取验证码</button>
+            <button wx:if="{{send}}" class='click' bindtap='clickPost' disabled="true">{{currentTime+"s"}}后重新发送</button>
+            </view>
+        </view>
+        <view class='btns'>
+            <button bindtap='clickBang' >绑定</button>
+        </view>
+        <van-toast id="van-toast" />
+        
+    </scroll-view>
+</page>
+
+
+

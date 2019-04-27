@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "绑定生意帮手机号",
+    "usingComponents": {
+        "van-toast": "../../dist/toast/index"
+    }
+}

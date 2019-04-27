@@ -1,0 +1,71 @@
+/* pages/bangding/bangding.wxss */
+page {
+    width: 100%;
+    height: 100%;
+}
+.pageBody {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+}
+.contentMsg {
+    display: flex;
+    justify-content: center;
+    margin-top: 100rpx;
+}
+.headImg {
+    width: 260rpx;
+    height: 260rpx;
+    border-radius: 100%;
+    border: 1px solid #e1f0ff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headImg image {
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 100%;
+}
+.cont {
+    text-align: center;
+}
+.phone {
+    margin-top: 60rpx;
+    color: #000;
+    font-size: 34rpx;
+    line-height: 60rpx;
+}
+.click {
+    margin-top: 120rpx;
+    color: #666;
+    font-size: 28rpx;
+    line-height: 50rpx;
+}
+.btns {
+    margin: 40rpx 0;
+}
+.btns button {
+    width: 86%;
+    height: 40px;
+    font-size: 32rpx;
+    color: #fff;
+    background: linear-gradient(to right ,#00b4ff, #0048ff); 
+    border-radius: 10px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 7%;
+}
+.jiechu {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 26rpx;
+    color: #000;
+}
+.jiechu .btn {
+    color: #008eff;
+}

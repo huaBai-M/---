@@ -1,0 +1,112 @@
+<!--pages/server/index.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <van-tabs active="{{ active }}" color="#006cff">
+            <van-tab title="官网建设">
+                <view class='content' wx:for="{{ builds }}" wx:key="{{index}}">
+                    <view class='borderV'>
+                        <image src='{{item.src}}' mode='scaleToFill'></image>
+                        <view class='name'>{{item.name}}</view>
+                        <view class='btns'>
+                            <text class='know'>了解更多</text>
+                            <text class='now'>立即申请</text>
+                        </view>
+
+                        <view wx:if="{{item.id==1 ||item.id==2}}">
+                            <view wx:if="{{(webopenstatus.through_trainA!=0&&webopenstatus.through_trainA!=null)||(webopenstatus.through_trainB!=0&&webopenstatus.through_trainB!=null)}}"  class='service'>
+                           
+                                <image src="../../img/icon_service_180.png" mode='scaleToFill'></image> 服务已开通
+                            </view>
+                        </view>
+                         <view wx:elif="{item.id==3}}">
+                            <view wx:if="{{webopenstatus.micro_business!=0&&webopenstatus.micro_business!=null}}"  class='service'>
+                                <image src="../../img/icon_service_180.png" mode='scaleToFill'></image> 服务已开通
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='content lastContent'>
+                    <view class='borderV addBorder'>
+                        <view class='iconfont  icon-tianjiajiahaowubiankuang'></view>
+                        <view class='title'>添加企业官网建设服务</view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="营销推广">
+                <view class='content' wx:for="{{ marketing }}" wx:key="{{index}}">
+                    <view class='borderV'>
+                        <image src='{{item.src}}' mode='scaleToFill'></image>
+                        <view class='name'>{{item.name}}</view>
+                        <view class='btns'>
+                            <text class='know'>了解更多</text>
+                            <text class='now'>立即申请</text>
+                        </view>
+                        <view wx:if="{item.id==1}}">
+                            <view wx:if="{{webopenstatus.through_trainA!=0&&webopenstatus.through_trainA!=null}}"  class='service'>
+                                <image src="../../img/icon_service_180.png" mode='scaleToFill'></image> 服务已开通
+                            </view>
+                        </view>
+                        <view wx:elif="{item.id==2}}">
+                            <view wx:if="{{(webopenstatus.through_trainA!=0&&webopenstatus.through_trainA!=null)||(webopenstatus.through_trainB!=0&&webopenstatus.through_trainB!=null)}}"  class='service'>
+                                <image src="../../img/icon_service_180.png" mode='scaleToFill'></image> 服务已开通
+                            </view>
+                        </view>
+                        <view wx:elif="{item.id==3}}">
+                            <view wx:if="{{webopenstatus.micro_gold!=0&&webopenstatus.micro_gold!=null}}"  class='service'>
+                                <image src="../../img/icon_service_180.png" mode='scaleToFill'></image> 服务已开通
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='content lastContent'>
+                    <view class='borderV addBorder'>
+                        <view class='iconfont  icon-tianjiajiahaowubiankuang'></view>
+                        <view class='title'>添加企业营销推广服务</view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="品牌推广">
+                <view class='content' wx:for="{{ brand }}" wx:key="{{index}}">
+                    <view class='borderV'>
+                        <image src='{{item.src}}' mode='scaleToFill'></image>
+                        <view class='name'>{{item.name}}</view>
+                        <view class='btns'>
+                            <text class='know'>了解更多</text>
+                            <text class='now'>立即申请</text>
+                        </view>
+
+                        <view wx:if="{item.id==1}}">
+                            <view wx:if="{{webopenstatus.productpromotion!=0&&webopenstatus.productpromotion!=null}}"  class='service'>
+                                <image src="../../img/icon_service_180.png" mode='scaleToFill'></image> 服务已开通
+                            </view>
+                        </view>
+                        <view wx:elif="{item.id==3}}">
+                            <view wx:if="{{webopenstatus.cCTVExtension!=0&&bopenstatus.cCTVExtension!=null}}"  class='service'>
+                                <image src="../../img/icon_service_180.png" mode='scaleToFill'></image> 服务已开通
+                            </view>
+                        </view>
+
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="增值服务">
+                <view class='content' wx:for="{{ increment }}" wx:key="{{index}}">
+                    <view class='borderV'>
+                        <image src='{{item.src}}' mode='scaleToFill'></image>
+                        <view class='name'>{{item.name}}</view>
+                        <view class='btns'>
+                            <text class='know'>了解更多</text>
+                            <text class='now'>立即申请</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='content lastContent'>
+                    <view class='borderV addBorder'>
+                        <view class='iconfont  icon-tianjiajiahaowubiankuang'></view>
+                        <view class='title'>添加企业增值服务</view>
+                    </view>
+                </view>
+            </van-tab>
+        </van-tabs>
+    </scroll-view>
+</page>

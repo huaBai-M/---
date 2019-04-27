@@ -1,0 +1,17 @@
+/**app.wxss**/
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap:wrap;
+} 
+.clearFix::before,
+.clearFix::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}

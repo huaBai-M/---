@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "超级流量宝查询",
+    "usingComponents": {
+        "van-tab": "../../dist/tab/index",
+        "van-tabs": "../../dist/tabs/index"
+    }
+}

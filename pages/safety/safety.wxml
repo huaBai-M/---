@@ -1,0 +1,28 @@
+<!--pages/safety/safety.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <!-- 头像 -->
+        <view class='headImg'>
+           <view class='msg'><text class='iconfont icon-icon_lock'></text><input bindinput='input1' placeholder="请输入原始密码" value='{{passwaordlast}}' password='{{seen}}' placeholder-style="font-size:14px;"/>
+           <text wx:if='{{seen}}' class='iconfont icon-icon_see seenNo' bindtap='changeColor'></text>
+           <text wx:if='{{!seen}}' class='iconfont icon-icon_see seen' bindtap='changeColor'></text>
+           </view>
+        </view>
+        <view class='base-mesg'>
+            <view class='msg'><text class='iconfont icon-icon_lock'></text><input  bindinput='input2' placeholder="新密码（6-16位数字字母组合密码）" value='{{newpasword}}' password='{{seen1}}' placeholder-style="font-size:14px;"/>
+            <text wx:if='{{seen1}}' class='iconfont icon-icon_see seenNo' bindtap='changeColor2'></text>
+           <text wx:if='{{!seen1}}' class='iconfont icon-icon_see seen' bindtap='changeColor2'></text>
+            </view>
+             <view class='msg'><text class='iconfont icon-icon_lock'></text><input  bindinput='input3' placeholder="请再次确认密码" value='{{testpasword}}' password='{{seen2}}' placeholder-style="font-size:14px;"/>
+             <text wx:if='{{seen2}}' class='iconfont icon-icon_see seenNo' bindtap='changeColor3'></text>
+             <text wx:if='{{!seen2}}' class='iconfont icon-icon_see seen' bindtap='changeColor3'></text>
+             </view>
+        </view>
+        <view class='btns'>
+            <button bindtap='submit'>确定</button>
+        </view>
+        <van-toast id="van-toast" />
+    </scroll-view>
+</page>
+
+

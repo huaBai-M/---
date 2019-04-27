@@ -1,0 +1,25 @@
+<!--pages/server/index.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+    <view class='addRotate'></view>
+        <view class='topTitle'>
+            <view class="table">
+                <view class="tr bg-w">
+                    <view class="th">浏览时间</view>
+                    <view class="th">来源</view>
+                    <view class="th ">地区</view>
+                </view>
+                <block wx:for="{{listData}}" wx:key="{{item.code}}">
+                    <view class="tr">
+                        <view class="td">{{item.accessTime}}</view>
+                        <view class="td">
+                            <text>{{item.channel}}</text>
+                        </view>
+                        <view class="td">{{item.local}}</view>
+                    </view>
+                </block>
+            </view>
+            <view class='tiltes' wx:if="{{state}}">没有更多数据了~</view>
+        </view>
+    </scroll-view>
+</page>

@@ -1,0 +1,33 @@
+<!--pages/recharge/recharge.wxml-->
+<page>
+<scroll-view class='pageBody'>   
+    <view class='topTitle'>
+    <view class='addBg'></view>
+         <view class='type'>
+            <text class='ct'>卡类型</text>
+            <input value='超级流量卡' type='text'/>
+         </view>
+         <view class='type'>
+            <text class='ct'>卡号</text>
+            <input value='{{cardId}}' placeholder='输入您的卡号' type='text' bindinput='formCard' bindchange='cardBlur'/>
+         </view>
+         <view class='type'>
+            <text class='ct'>密码</text>
+            <input value='{{password}}' placeholder='请输入密码' password="true" bindinput='formPassword' bindchange='passwordBlur'/>
+         </view>
+         <view class='type'>
+            <text class='ct'>验证码</text>
+            <input  type='text' placeholder='请输入验证码' bindinput='formCode' value='{{code}}' bindchange='codeBlur'/>
+            <image wx:if="{{imageHide}}" src='{{srcImage}}' mode='scaleToFill' bindtap='lickChange'></image>
+            <!-- <input type='image' value='{{srcImage}}' bindtap='lickChange'/> -->
+         </view>
+    </view>
+    <view class='btn'>
+        <button bindtap='recharge'>立即充值</button>
+    </view>
+    <view class='toast'>
+        <van-toast id="van-toast" />
+    </view>
+</scroll-view>
+
+</page>

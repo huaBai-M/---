@@ -1,0 +1,165 @@
+<!--pages/buy/buy.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <view class='topTitle'>
+            <view class="table">
+                <view class="tr bg-w">
+                    <view class="th">产品名称</view>
+                    <view class="th">购买日期</view>
+                    <view class="th ">到期日期</view>
+                    <view class="th ">状态</view>
+                </view>
+                <block wx:for="{{listData}}" wx:key="{{item.code}}">
+                    <view class="tr">
+                        <view class="td">
+
+                          <view wx:if="{{item.type==1}}">
+                            <view wx:if="{{item.producttype=='A'}}">直通车</view>
+                            <view wx:elif="{{item.producttype=='B'}}">新云商宝</view>
+                            <view wx:elif="{{item.producttype=='C'}}">其他</view>
+                            <view wx:elif="{{item.producttype=='D'}}">云商宝推广版</view>
+                            <view wx:elif="{{item.producttype=='E'}}">本地帮</view>
+                            <view wx:elif="{{item.producttype=='F'}}">生意帮</view>
+                            <view wx:elif="{{item.producttype=='G'}}">全网通</view>
+                          
+                          </view>
+                          <view wx:elif="{{item.type==2}}">
+                            <view wx:if="{{item.producttype=='A'}}">国内英文</view>
+                            <view wx:elif="{{item.producttype=='B'}}">国内中文</view>
+                            <view wx:elif="{{item.producttype=='C'}}">国际英文</view>
+                            <view wx:elif="{{item.producttype=='D'}}">国际中文</view>
+                            <view wx:elif="{{item.producttype=='E'}}">其他</view>
+                          </view>
+                          <view wx:elif="{{item.type==3}}">
+                            <view wx:if="{{item.producttype=='A'}}">微商宝</view>
+                            <view wx:elif="{{item.producttype=='B'}}">微分销</view>
+                          </view>
+                          <view wx:elif="{{item.type==4}}">
+                            <view wx:if="{{item.producttype=='E商宝'}}">E商宝</view>
+                            <view wx:elif="{{item.producttype=='云商宝'}}">云商宝</view>
+                            <view wx:elif="{{item.producttype=='云商宝推广版'}}">云商宝推广版</view>
+                            <view wx:elif="{{item.producttype=='产品直通车'}}">产品直通车</view>
+                            <view wx:elif="{{item.producttype=='域名'}}">域名</view>
+                            <view wx:elif="{{item.producttype=='微分销'}}">微分销</view>
+                            <view wx:elif="{{item.producttype=='微商宝'}}">微商宝</view>
+                            <view wx:elif="{{item.producttype=='微点金'}}">微点金</view>
+                            <view wx:elif="{{item.producttype=='智能网站'}}">智能网站</view>
+                            <view wx:elif="{{item.producttype=='网上商城'}}">网上商城</view>
+                            <view wx:elif="{{item.producttype=='虚拟主机'}}">虚拟主机</view>
+                            <view wx:elif="{{item.producttype=='行业网站'}}">行业网站</view>
+                            <view wx:elif="{{item.producttype=='本地通'}}">本地通</view>
+                            <view wx:elif="{{item.producttype=='全网通'}}">全网通</view>
+                            <view wx:elif="{{item.producttype=='其他'}}">其他</view>
+                          </view>
+                          <view wx:elif="{{item.type==5}}">
+                             <view wx:if="{{item.producttype==1}}">智能网站</view>
+                            <view wx:elif="{{item.producttype==2}}">行业网站</view>
+                            <view wx:elif="{{item.producttype==3}}">商城</view>
+                          </view>
+                          <view wx:elif="{{item.type==7}}"></view>
+                          <view wx:elif="{{item.type==8}}">
+                              <view wx:if="{{item.producttype=='A'}}">直通车</view>
+                              <view wx:elif="{{item.producttype=='B'}}">新云商宝</view>
+                              <view wx:elif="{{item.producttype=='C'}}">其他</view>
+                              <view wx:elif="{{item.producttype=='D'}}">云商宝推广版</view>
+                              <view wx:elif="{{item.producttype=='E'}}">本地帮</view>
+                              <view wx:elif="{{item.producttype=='F'}}">生意帮</view>
+                              <view wx:elif="{{item.producttype=='G'}}">全网通</view>
+                          </view>
+                          <view wx:elif="{{item.type==9}}">
+                             <view wx:if="{{item.producttype=='A'}}">直通车</view>
+                              <view wx:elif="{{item.producttype=='B'}}">新云商宝</view>
+                              <view wx:elif="{{item.producttype=='C'}}">其他</view>
+                              <view wx:elif="{{item.producttype=='D'}}">云商宝推广版</view>
+                              <view wx:elif="{{item.producttype=='E'}}">本地帮</view>
+                              <view wx:elif="{{item.producttype=='F'}}">生意帮</view>
+                              <view wx:elif="{{item.producttype=='G'}}">全网通</view>
+                          </view>
+
+                        </view>
+                        <view class="td">{{item.orderTime}}</view>
+                        <view class="td">{{item.expireTime}}</view>
+
+
+
+
+                        <view class="td">
+
+                          <view wx:if="{{item.type==1}}">
+                            <view wx:if="{{item.status==0}}">下单待审核</view>
+                            <view wx:elif="{{item.status==1}}">审核通过待开通</view>
+                            <view wx:elif="{{item.status==2}}">审核不通过</view>
+                            <view wx:elif="{{item.status==3}}">开通待上传</view>
+                            <view wx:elif="{{item.status==4}}">上传待录入</view>
+                            <view wx:elif="{{item.status==5}}">录入带检查</view>
+                            <view wx:elif="{{item.status==6}}">检查不合格</view>
+                            <view wx:elif="{{item.status==7}}">待解析</view>
+                            <view wx:elif="{{item.status==8}}">上线完成</view>
+                            <view wx:elif="{{item.status==9}}">已收录</view>
+                            <view wx:elif="{{item.status==10}}">已达标</view>
+                            <view wx:elif="{{item.status==11}}">已过期</view>
+                            <view wx:elif="{{item.status==12}}">过期作废</view>
+                          </view>
+                          <view wx:elif="{{item.type==2}}">
+                            <view wx:if="{{item.status==-1}}">未下单</view>
+                            <view wx:if="{{item.status==0}}">下单待审核</view>
+                            <view wx:elif="{{item.status==1}}">审核通过代注册</view>
+                            <view wx:elif="{{item.status==2}}">审核不通过</view>
+                            <view wx:elif="{{item.status==3}}">注册成功</view>
+                            <view wx:elif="{{item.status==4}}">注册失败</view>
+                            <view wx:elif="{{item.status==5}}">过期删除</view>
+                            <view wx:elif="{{item.status==6}}">删除作废</view>
+                          </view>
+                          <view wx:elif="{{item.type==3}}">
+                            <view wx:if="{{item.status==-1}}">未下单</view>
+                            <view wx:if="{{item.status==0}}">下单待审核</view>
+                            <view wx:elif="{{item.status==1}}">审核通过待开通</view>
+                            <view wx:elif="{{item.status==2}}">审核不通过</view>
+                            <view wx:elif="{{item.status==3}}">开通完成</view>
+                            <view wx:elif="{{item.status==4}}">过期删除</view>
+                          </view>
+                          <view wx:elif="{{item.type==4}}">
+                            <view wx:if="{{item.status==0}}">待下单</view>
+                            <view wx:elif="{{item.status==1}}">下单待审核</view>
+                            <view wx:elif="{{item.status==2}}">审核不通过</view>
+                            <view wx:elif="{{item.status==3}}">已下单</view>
+                            <view wx:elif="{{item.status==4}}">完成</view>
+                          </view>
+                          <view wx:elif="{{item.type==5}}">
+                             <view wx:if="{{item.status==0}}">下单待审核</view>
+                            <view wx:elif="{{item.status==1}}">审核通过待开通</view>
+                            <view wx:elif="{{item.status==2}}">审核不通过</view>
+                            <view wx:elif="{{item.status==3}}">开通待上传</view>
+                            <view wx:elif="{{item.status==4}}">上传待录入</view>
+                            <view wx:elif="{{item.status==7}}">录入待解析</view>
+                            <view wx:elif="{{item.status==8}}">上线完成</view>
+                          </view>
+                          <view wx:elif="{{item.type==7}}"></view>
+                          <view wx:elif="{{item.type==8}}">
+                            <view wx:if="{{item.status==0}}">下单待审核</view>
+                            <view wx:elif="{{item.status==1}}">待处理</view>
+                            <view wx:elif="{{item.status==2}}">待投放</view>
+                            <view wx:elif="{{item.status==3}}">投放待百度审核</view>
+                            <view wx:elif="{{item.status==4}}">暂停下线</view>
+                            <view wx:elif="{{item.status==5}}">到期删除</view>
+                            <view wx:elif="{{item.status==7}}">删除作废</view>
+                            <view wx:elif="{{item.status==8}}">直推处理</view>
+                          </view>
+                          <view wx:elif="{{item.type==9}}">
+                             <view wx:if="{{item.status==0}}">下单待审核</view>
+                            <view wx:elif="{{item.status==1}}">已投放</view>
+                            <view wx:elif="{{item.status==2}}">审核不通过</view>
+                            <view wx:elif="{{item.status==3}}">待投放</view>
+                            <view wx:elif="{{item.status==4}}">冻结</view>
+                          </view>
+                        
+                        
+                        
+                        
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
+</page>

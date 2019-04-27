@@ -1,0 +1,90 @@
+/* pages/user/index.wxss */
+@import "../../font/iconfont.wxss";
+page {
+    width: 100%;
+    height: 100%;
+}
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background: url("http://page-bucket.oiaqye7985.com/wechat/mini-syb/bg1.jpg") no-repeat top;
+    background-size: cover;
+    padding-top: 30rpx;
+}
+.headImg {
+    width: 92%;
+    margin-left: 4%;
+    background-color: #fff;
+    border-radius: 30rpx;
+    box-sizing: border-box;
+    padding: 30rpx;
+    box-shadow: 0 0 30rpx #e7e7e7;
+    margin-top: 30rpx;
+    display: flex;
+    flex-grow: grow;
+}
+.leftImg {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.leftImg image {
+    width: 160rpx;
+    height: 160rpx;
+}
+.nameUser {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20rpx;
+}
+.nameUser .name {
+    color: #333;
+    font-size: 40rpx;
+    font-weight: 700;
+}
+.nameUser .company {
+    color: #999;
+    font-size: 30rpx;
+    margin-top: 10rpx;
+}
+.base-mesg {
+    margin-top: 30rpx;
+    background-color: #fff;
+}
+.base-mesg .msg {
+    height: 120rpx;
+    line-height: 120rpx;
+    color: #000;
+    font-size: 34rpx;
+    margin-left: 8%;
+    border-bottom: 1rpx solid #e7e7e7;
+}
+.base-mesg .iconfont {
+    width: 50rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    background-color: #024eff;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-size: 30rpx;
+    margin-right: 20rpx;
+}
+.base-mesg .icon-anquan {
+    font-size: 40rpx; 
+}
+.base-mesg .icon-fuwu {
+    font-size: 35rpx; 
+}
+.rr {
+    float: right;
+    margin-right: 50rpx;
+    color: #999;
+}
+.base-mesg .msg:last-child {
+    border-bottom: 1rpx solid transparent;
+}

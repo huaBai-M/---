@@ -1,0 +1,20 @@
+<!--pages/user/index.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <!-- 头像 -->
+        <view class='headImg'>
+           <view class='leftImg'>
+            <image src='{{headUrl}}' mode='scaleToFill'></image>
+           </view>
+           <view class='nameUser'>
+             <view class='name'>{{name}}</view><view class='company'>{{company}}</view>
+           </view>
+        </view>
+        <view class='base-mesg'>
+           <navigator class='msg' url="../baseMesg/baseMesg" hover-class="navigator-hover"><text class='iconfont icon-jibenxinxi'></text>基本信息 <text class='rr'> > </text></navigator>
+           <navigator class='msg' url="../safety/safety" hover-class="navigator-hover"><text class='iconfont icon-anquan'></text>账号安全 <text class='rr'> > </text></navigator>
+           <navigator class='msg' url="../buy/buy" hover-class="navigator-hover"><text class='iconfont icon-fuwu'></text>已购买服务 <text class='rr'> > </text></navigator>
+           <navigator class='msg' url="/pages/bangMsg/bangMsg" hover-class="navigator-hover"><text class='iconfont icon-icon_bq'></text>解除绑定 <text class='rr'> > </text></navigator>
+        </view>
+    </scroll-view>
+</page>

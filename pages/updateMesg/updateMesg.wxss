@@ -1,0 +1,84 @@
+/* pages/baseMesg/baseMesg.wxss */
+@import "../../font/iconfont.wxss";
+page {
+    width: 100%;
+    height: 100%;
+}
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background: url("http://page-bucket.oiaqye7985.com/wechat/mini-syb/bg.jpg") no-repeat top;
+    background-size: cover;
+}
+.base-mesg {
+    margin-top: 30rpx;
+    background-color: #fff;
+    border-radius: 30rpx;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 40rpx;
+    width: 96%;
+    margin-left: 2%;
+}
+.base-mesg .msg {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 105rpx;
+    border-bottom: 1rpx solid #e7e7e7;
+}
+.base-mesg .msg:last-child {
+    border-bottom: 1rpx solid transparent;
+}
+.base-mesg .msg label {
+    color: #000;
+    font-size:34rpx;
+    flex: 3;
+    font-weight: 500;
+}
+.base-mesg .msg input {
+    color: #888888;
+    font-size: 28rpx;
+    display: inline;
+    flex: 6;
+    text-align: right;
+}
+.base-mesg .msg1 picker {
+    color: #353535;
+    font-size: 28rpx;
+    display: inline;
+    flex: 6;
+    text-align: right;
+}
+.rr {
+   color: #999;
+   font-size: 28rpx; 
+   text-align: right;
+   margin-left: 10rpx;
+}
+.base-mesg .msg1 input{
+    color: #353535;
+}
+.btns {
+    margin: 60rpx 0;
+}
+.btns button {
+    display: inline-block;
+    width: 35%;
+    height: 40px;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: #0458ff;
+    border-radius: 20px;
+    line-height: 40px;
+}
+.btns button.cancel {
+    background-color: #dae1e7;
+    margin-right: 9%;
+    margin-left: 7%;
+    color: #666;
+}
+button.cancel::after {
+  border: 0;
+}

@@ -1,0 +1,80 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.1",
+	"appid": "wxe703a35413001730",
+	"projectname": "%E7%94%9F%E6%84%8F%E5%B8%AE%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "bangding",
+					"pathName": "pages/bangding/bangding",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bangMsg",
+					"pathName": "pages/bangMsg/bangMsg",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "hot",
+					"pathName": "pages/indexHot/indexHot",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "keyWords",
+					"pathName": "pages/keywords/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "flow",
+					"pathName": "pages/flow/flow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "recharge",
+					"pathName": "pages/recharge/recharge",
+					"query": ""
+				}
+			]
+		}
+	}
+}

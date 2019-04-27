@@ -1,0 +1,60 @@
+<!--pages/business/business.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+    <view class='addRotate'></view>
+        <view class='title'>—— 共{{allnumber}}条商机 ——</view>
+        <!-- 列表 -->
+        <view class='listContent' wx:for="{{businessMsg}}" wx:key="index" wx:for-item="i">
+            <view class='list'>
+                <view class='businessMsg'>
+                    <text class="iconfont icon-icon_bq">商机信息</text>
+                    <view class='source'>来源
+                        <text class="iconfont icon-icon_go"></text>
+                    </view>
+                </view>
+                <view class='timeBusiness'>{{i.createdate}}</view>
+                <view class='content'>{{i.msgtext}}</view>
+                <view class='lastLine'>共{{i.followupCount}}条访客跟进
+                    <view class='show' bindtap='ShowClick' data-index="{{index}}"   data-id="{{i.id}}">
+                      <text hidden="{{!i.ifshow}}">展开<text class="iconfont icon-mendianzuoye-xitongtubiao-"></text></text>
+                      <text hidden='{{i.ifshow}}'>收起<text class="iconfont icon-shouqi"></text></text> 
+                    </view>
+                </view>
+                <view class='sanJ'hidden="{{i.ifshow}}" ></view>
+            </view>
+            <view hidden='{{i.ifshow}}'>
+
+                <view class='hideMesg' wx:for="{{i.businessMsgitems}}" wx:key="j" wx:for-item="j">
+                    <view class='oneL'>
+                        <text class='rightS'></text>【{{j.createrType}}】{{j.createrName}}
+                        <view class='oneTime'>{{j.createTime}}</view>
+                    </view>
+                    <view class='msg'>跟进内容：{{j.createContent}}</view>
+                </view>
+                <view class='lastIconS'>
+                    <text class='lastIcon'></text>
+                    <button class='button' bindtap='addContent' data-ind="{{index}}">新增跟进内容</button>
+                </view>
+                <view class='addHideContent' hidden='{{i.ifcount}}'>
+                    <view class='textS'>
+                        <radio-group bindchange="radioChange">
+                            <label class="radio" wx:for="{{radios}}" wx:key="k" wx:for-item="k">
+                                <radio value="{{k.name}}" checked="{{k.checked}}" color='#fff' />{{k.value}}
+                            </label>
+                        </radio-group>
+                        <view class="section">
+                            <textarea bindinput="bindTextAreaBlur" data-val="{{inputText}}" value='{{inputText}}' />
+                        </view>
+                    </view>
+
+                    <view class='btns'>
+                        <button class='cancel' bindtap='addContent' data-ind="{{index}}">取消</button>
+                        <button class='save' data-messageId='{{i.id}}' data-index='{{index}}' bindtap='addsjf' disabled='{{canClick}}' >保存    </button>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view hidden='{{iconShow}}' class='iconShow'>{{iconText}}</view>
+    </scroll-view>
+</page>

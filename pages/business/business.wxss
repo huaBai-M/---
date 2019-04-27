@@ -1,0 +1,261 @@
+/* pages/business/business.wxss */
+@import "../../font/iconfont.wxss";
+
+page {
+    height: 100%;
+}
+
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background: #f0f5f8;
+}
+.addRotate {
+    width: 100%;
+    height: 250rpx;
+    background: url("http://page-bucket.oiaqye7985.com/wechat/mini-syb/pic.png") no-repeat center;
+    background-size: cover;
+}
+.title {
+    text-align: center;
+    margin: 20rpx 0;
+    font-size: 28rpx;
+    color: #fff;
+    margin-top: -230rpx;
+    margin-bottom: 30rpx;
+}
+
+.list {
+    width: 96%;
+    margin-left: 2%;
+    background-color: #fff;
+    border-radius: 30rpx;
+    margin-bottom: 30rpx;
+    box-shadow: 0 0 20rpx #e7e7e7;
+    padding: 50rpx 25px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.businessMsg text {
+    color: #0458ff;
+    font-size: 36rpx;
+    margin-right: 10rpx;
+    font-weight: 700;
+}
+
+.businessMsg .source {
+    float: right;
+    color: #0458ff;
+    font-size: 26rpx;
+    width: 110rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    border-radius: 25rpx;
+    border: 1px solid #0458ff;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 10rpx;
+    margin-top: 5rpx;
+}
+
+.businessMsg .source .iconfont {
+    font-size: 20rpx;
+    /* vertical-align: top; */
+    color: #0458ff;
+}
+
+.timeBusiness {
+    font-size: 28rpx;
+    color: #888;
+    margin-top: 15rpx;
+}
+
+.content {
+    font-size: 30rpx;
+    color: #353535;
+    margin-top: 15rpx;
+}
+
+.lastLine {
+    font-size: 28rpx;
+    color: #353535;
+    margin-top: 25rpx;
+    border-top: 1px solid #e7e7e7;
+    padding-top: 25rpx;
+}
+
+.show {
+    float: right;
+}
+
+.show .iconfont {
+    font-size: 40rpx;
+    color: #222;
+    vertical-align: middle;
+}
+.show .icon-shouqi {
+    font-size: 34rpx;
+}
+.sanJ {
+    width: 0;
+    height: 0;
+    border-width: 45rpx;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    left: 24rpx;
+    bottom: -1;
+}
+
+.hideMesg {
+    margin-left: 80rpx;
+    font-size: 30rpx;
+    color: #333;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+    position: relative;
+    padding-left: 40rpx;
+    padding-bottom: 40rpx;
+}
+
+.hideMesg .msg {
+    font-size: 26rpx;
+    color: #666;
+    margin-top: 20rpx;
+    margin-left: 10rpx;
+}
+
+/* .listContent .hideMesg:nth-last-child(1){
+    border-left: 1px solid #ccc;
+    padding-bottom: 40rpx;
+} */
+
+.rightS {
+    width: 24rpx;
+    height: 24rpx;
+    background-color: #f0f5f8;
+    line-height: 24rpx;
+    border-radius: 100%;
+    position: absolute;
+    left: -13rpx;
+    top: 0;
+    z-index: 100;
+    border: 1rpx solid #0458ff;
+}
+
+.oneTime {
+    float: right;
+    padding-right: 30rpx;
+    font-size: 24rpx;
+    color: #656;
+}
+
+.lastIconS {
+    margin-left: 81rpx;
+    margin-top: -5rpx;
+    margin-bottom: 40rpx;
+    position: relative;
+    padding-left: 24rpx;
+}
+.lastIcon {
+    width:24rpx;
+    height:24rpx;
+    background-color:#f0f5f8;
+    line-height:24rpx;
+    border-radius:100%;
+    position:absolute;
+    left:-13rpx;
+    top:0;
+    z-index:100;
+    border:1rpx solid #0458ff;
+}
+.lastIconS .button {
+    width: 40%;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: #0458ff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20rpx;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -25rpx;
+}
+
+.addHideContent {
+    margin-top: 30rpx;
+    color: #666;
+}
+.addHideContent .textS {
+    margin-left: 12%;
+}
+.addHideContent label {
+    font-size: 26rpx;
+}
+
+/* 修改radio默认样式 */
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+    border-radius: 50%;
+    width: 12rpx;
+    height: 12rpx;
+    text-align: center;
+    font-size: 0rpx; /* 对勾大小 去掉 */
+    background-color: #0458ff;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+radio {
+    border-radius: 50%;
+    width: 24rpx; /* 最好是4的倍数，不然会不在中间 */
+    height: 24rpx;
+    border: 2rpx solid #ccc; /* 设置边框（外圆） */
+    font-size: 0; /* 让边框重合 */
+    margin-right: 5rpx;
+    margin-left: 10rpx;
+    vertical-align: middle;
+}
+
+radio .wx-radio-input {
+    border-radius: 50%;
+    width: 24rpx;
+    height: 24rpx;
+    border: none; /* 替换边框（隐藏原有边框） */
+}
+
+textarea {
+    border: 1px solid #ccc;
+    height: 100px;
+    margin-top: 20rpx;
+    background-color: #fff;
+}
+.btns {
+    margin: 40rpx 0;
+}
+.btns button {
+    display: inline-block;
+    width: 35%;
+    height: 40px;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: #0458ff;
+    border-radius: 20px;
+    line-height: 40px;
+}
+.btns button.cancel {
+    background-color: #dae1e7;
+    margin-right: 15%;
+    margin-left: 7%;
+    color:#666;
+}
+button.cancel::after {
+    border:0;
+}
+.iconShow{
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 10px;
+  
+}

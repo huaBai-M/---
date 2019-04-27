@@ -1,0 +1,30 @@
+<!--pages/bangMsg/bangMsg.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <view class='contentMsg'>
+            <view class='headImg'>
+                <image src='../../img/head.png' mode='scaleToFill'></image>
+            </view>
+        </view>
+        <view class='cont'>
+            <view class='phone'>
+                您当前绑定的账号为
+                <view class='tel'>{{mobile}}</view>
+            </view>
+            <view class='click'>
+                点击下方“生意帮小程序”按钮
+                <view>
+                    可了解更多商机信息和流量情况
+                </view>
+            </view>
+            <view class='btns'>
+                <button bindtap='clickIndex'>生意帮小程序</button>
+            </view>
+            <view class='jiechu'>
+              如需更换手机号，点击 <text class='btn' bindtap='jiechBund'>解除绑定</text>
+            </view>
+        </view>
+        <van-dialog id="van-dialog" />
+        <van-toast id="van-toast" />
+    </scroll-view>
+</page>

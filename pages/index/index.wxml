@@ -1,0 +1,125 @@
+<!--index.wxml-->
+<scroll-view class='pageBody'>
+   <view class="mapImage">
+      <image src='http://page-bucket.oiaqye7985.com/wechat/mini-syb/china_map.jpg' mode='scaleToFill'></image>
+   </view>
+<!-- 精准流量热力图 -->
+   <view class='flowH'>
+        <view class="titleF">
+            精准流量热力图
+        </view>
+        <view class="pcM">
+            电脑端<text class='num'>{{flow.moblies}}</text>
+            <text class='line'></text>
+            移动端<text class='num'>{{flow.pcNumbers}}</text>
+        </view>
+        <button class='lookMore' bindtap="moreHot">查看更多</button>
+       </view>
+  <!-- 商机信息 -->
+  <view class="megS">
+        <view class="titleC">
+            <text class='iline'></text><text>商机信息</text>
+            <view  class="iconfont icon-caidan rpoint" bindtap='clickBuss'></view>
+        </view>
+        <van-row class="dataS">
+            <van-col span="8">
+                <view class='data1'>
+                    <view class="fP" style='color:#000;font-size:40rpx;font-weight:500;'>{{business}}</view>
+                    <view class="sP">总商机</view>    
+                    <text class='iRight'></text>
+                </view>   
+            </van-col>
+            <van-col span="8">
+                <view class='data1'>
+                    <view class="fP" style='color:#000;font-size:40rpx;font-weight:500;'>{{business1}}</view>
+                    <view class="sP">近30日</view>    
+                    <text class='iRight'></text>
+                </view>   
+            </van-col>
+            <van-col span="8">
+                <view class="fP" style='color:#000;font-size:40rpx;font-weight:500;'>{{business2}}</view>
+                <view class="sP">近90日</view>
+            </van-col>
+        </van-row> 
+    </view>
+    <!-- 超级流量宝 -->
+  <view class="megS flowS" wx:if='{{status}}'>
+        <view class="titleC">
+            <text class='iline'></text><text>超级流量宝</text>
+        </view>
+        <van-row class="dataS">
+            <van-col span="8">
+                <view class='data1'>
+                    <view class="fP" style='color:#000;font-size:40rpx;font-weight:500;'>{{flowS.clickAllNum}}</view>
+                    <view class="sP">累计点击量</view>    
+                    <text class='iRight'></text>
+                </view>   
+            </van-col>
+            <van-col span="8">
+                <view class='data1'>
+                    <view class="fP" style='color:#000;font-size:40rpx;font-weight:500;'>{{flowS.clickDayNum}}</view>
+                    <view class="sP">今日点击量</view>    
+                    <text class='iRight'></text>
+                </view>   
+            </van-col>
+            <van-col span="8">
+                <view class="fP" style='color:#000;font-size:40rpx;font-weight:500;'>{{flowS.surplusNum}}</view>
+                <view class="sP">剩余点击量</view>
+            </van-col>
+        </van-row> 
+        <view class='btns'>
+                <view class='query' bindtap='Linkquery'><text class='iconfont icon-icon_search'></text>查询</view>
+                <view class='chongzhi' bindtap='LinkRange'><text class='iconfont icon-icon_pay'></text>充值</view>
+        </view>
+    </view>
+    <!-- 搜索引擎关键词比例 -->
+   <view class="container huanTu megS">
+        <view class="titleC">
+            <text class='iline'></text><text>搜索引擎关键词比例</text>
+            <navigator class="iconfont icon-caidan rpoint" url='../keywords/index'></navigator>
+            <!-- <text class="iconfont icon-caidanicon-icon_bq rpoint"></text> -->
+            <view class='titleSmall'>过去12个月累计数值{{nums}}</view>
+            
+        </view>
+      <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" bind:init="echartInit"></ec-canvas>
+   </view>
+   <view class="megS keyMegs">
+        <view class="titleC">
+            <text class='iline'></text><text>关键词排名数据</text>
+            <image src='http://page-bucket.oiaqye7985.com/wechat/mini-syb/new.png' mode='scaleToFill'></image>
+           
+        </view>
+      <van-row class='ranking'>
+         <van-col span="11">
+                <view class='rank'>
+                    <view class="fP" style='color:#000;font-size:40rpx;font-weight:500;'>{{keywors}}</view>
+                    <view class="sP">关键词数量</view>    
+                    <text class='iRight'></text>
+                </view>   
+            </van-col>
+            <van-col span="13">
+                <view class='rank rank2'>
+                    <view class="fP" style='color:#000;font-size:40rpx;font-weight:500;'>{{nums}}</view>
+                    <view class="sP">排名前五页关键词</view>    
+                </view>   
+            </van-col>
+      </van-row>
+      <view wx:for="{{ progress }}" wx:key="{{ index }}" class='progress'>
+      <van-row>
+         <van-col span="10" class="nameP">
+            {{item.name}}
+         </van-col>
+         <van-col span="12" class="numP">
+            {{item.num}}
+         </van-col>
+         <van-col span="20" class="topP">
+            <view class='paogressP'>
+                <view class="shadow" style="background-color:{{bgcolor[index]}};width:{{width[index]}}"></view>
+            </view>   
+         </van-col>
+         
+      </van-row>
+      </view>
+   </view>
+   <view class='bottomD'>Copyright 2016-2018 wayboo.cn 信融科技版权所有京ICP备 13035649号-2</view>
+</scroll-view>
